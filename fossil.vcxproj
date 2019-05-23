@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4B1D108E-A2A7-48F1-9FB0-E39C69DAD330}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>fossil</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>CTP_Nov2013</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>CTP_Nov2013</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Program Files\Microsoft DirectX SDK %28June 2010%29\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files\Microsoft DirectX SDK %28June 2010%29\Lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Program Files\Microsoft DirectX SDK %28June 2010%29\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files\Microsoft DirectX SDK %28June 2010%29\Lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;FOSSIL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;FOSSIL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>No</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="CRender.cpp" />
+    <ClCompile Include="GUI\CMenuTab.cpp" />
+    <ClCompile Include="GUI\tinyxml2.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Aimbot.h" />
+    <ClInclude Include="CBaseWeapon.h" />
+    <ClInclude Include="CGlobalVars.h" />
+    <ClInclude Include="CInput.h" />
+    <ClInclude Include="CClientClass.h" />
+    <ClInclude Include="CRankBoard.h" />
+    <ClInclude Include="CRC32.h" />
+    <ClInclude Include="CRender.h" />
+    <ClInclude Include="CTraceFilter.h" />
+    <ClInclude Include="CUserCmd.h" />
+    <ClInclude Include="CVerifiedUserCmd.h" />
+    <ClInclude Include="CWeaponConfig.h" />
+    <ClInclude Include="EngineRender.h" />
+    <ClInclude Include="ESP.h" />
+    <ClInclude Include="GUI\CBoneSelectionBox.h" />
+    <ClInclude Include="GUI\CBoneSelector.h" />
+    <ClInclude Include="GUI\CMenu.h" />
+    <ClInclude Include="GUI\CMenuButton.h" />
+    <ClInclude Include="GUI\CMenuComboBox.h" />
+    <ClInclude Include="GUI\CMenuConfigMgr.h" />
+    <ClInclude Include="GUI\CMenuDropDownList.h" />
+    <ClInclude Include="GUI\CMenuItem.h" />
+    <ClInclude Include="GUI\CMenuSelectBox.h" />
+    <ClInclude Include="GUI\CMenuSlider.h" />
+    <ClInclude Include="GUI\CMenuTab.h" />
+    <ClInclude Include="GUI\CMenuTabControl.h" />
+    <ClInclude Include="GUI\CMenuTabControlItem.h" />
+    <ClInclude Include="GUI\CMenuTextbox.h" />
+    <ClInclude Include="GUI\ConCheatClass.h" />
+    <ClInclude Include="GUI\ConConsole.h" />
+    <ClInclude Include="GUI\ConTextarea.h" />
+    <ClInclude Include="GUI\ConTextbox.h" />
+    <ClInclude Include="GUI\CPeriphery.h" />
+    <ClInclude Include="GUI\MenuListener.h" />
+    <ClInclude Include="GUI\MenuObservable.h" />
+    <ClInclude Include="GUI\Observer.h" />
+    <ClInclude Include="GUI\tinyxml2.h" />
+    <ClInclude Include="Helper.h" />
+    <ClInclude Include="IClientEntity.h" />
+    <ClInclude Include="IClientEntityList.h" />
+    <ClInclude Include="IDebugOverlay.h" />
+    <ClInclude Include="IEngineTrace.h" />
+    <ClInclude Include="IModelInfo.h" />
+    <ClInclude Include="IPanel.h" />
+    <ClInclude Include="ISurface.h" />
+    <ClInclude Include="ITraceFilter.h" />
+    <ClInclude Include="matrix3x4_t.h" />
+    <ClInclude Include="Factory.h" />
+    <ClInclude Include="IBaseClientDLL.h" />
+    <ClInclude Include="IVEngineClient.h" />
+    <ClInclude Include="MISC.h" />
+    <ClInclude Include="PlayerInfo.h" />
+    <ClInclude Include="ray_t.h" />
+    <ClInclude Include="SDK.h" />
+    <ClInclude Include="stdio.h" />
+    <ClInclude Include="trace_t.h" />
+    <ClInclude Include="Triggerbot.h" />
+    <ClInclude Include="Utils.h" />
+    <ClInclude Include="Vector.h" />
+    <ClInclude Include="CVMTHookManager.h" />
+    <ClInclude Include="VectorAligned.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
